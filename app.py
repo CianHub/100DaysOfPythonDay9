@@ -73,4 +73,8 @@ def combine_state_names_and_abbreviations(us_state_abbrev=us_state_abbrev,
        has both sorted, so:
        ['AK', 'AL', 'AZ', ..., 'South Dakota', 'Tennessee', 'Texas', ...]
        (see also test_combine_state_names_and_abbreviations)"""
-    pass
+    first_abbrevs = list(us_state_abbrev.values())[:10]
+    last_states = states[-10:]
+    first_abbrevs.sort()
+    last_states.sort()
+    return first_abbrevs + last_states
